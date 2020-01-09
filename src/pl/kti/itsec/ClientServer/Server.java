@@ -9,10 +9,11 @@ import java.net.Socket;
 
 public class Server {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception{
 		ServerSocket serverSocket = null;
+
 		try {
-			serverSocket = new ServerSocket(4444);
+			serverSocket = new ServerSocket(1763);
 		} catch (IOException e) {
 			System.err.println("SERVER: Could not listen on port: 4444, " + e);
 			System.exit(1);

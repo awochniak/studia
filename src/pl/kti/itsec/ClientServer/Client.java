@@ -10,7 +10,7 @@ public class Client {
 
 	public static void main(String[] args) {
 		try {
-			Socket socket = new Socket("localhost", 4444);
+			Socket socket = new Socket("localhost", 1763);
 			System.out.println("CLIENT: Server connected on port 4444");
 			
 			PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
@@ -40,7 +40,7 @@ public class Client {
 		} catch (UnknownHostException e) {
 			System.err.println("CLIENT: Trying to connect to unknown host: " + e);
 		} catch (Exception e) {
-			System.err.println("CLIENT: Exception:  " + e);
+			e.printStackTrace();
 		}
 
 	}
